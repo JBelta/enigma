@@ -16,4 +16,13 @@ class ShiftTest < Minitest::Test
   assert_equal 5, shift.keys.count
   assert_equal 4, shift.offsets.count
   end
+
+  def test_it_can_pair_keys
+    shift = Shift.new
+    example = shift.key_pairs
+    assert_equal 4, example.count
+    assert_equal Array, example.class
+    assert_instance_of Array, shift.key_pairs
+    assert_equal 4, shift.key_pairs.count
+  end
 end
