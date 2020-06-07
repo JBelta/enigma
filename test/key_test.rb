@@ -9,4 +9,9 @@ class KeyTest < Minitest::Test
     key = Key.new
     assert_instance_of Key, key
   end
-end 
+
+  def test_it_has_attributes
+  key = Key.new
+  assert_equal String, key.numbers.class
+  end
+end
