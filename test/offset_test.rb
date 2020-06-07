@@ -12,8 +12,8 @@ class OffsetTest < Minitest::Test
 
   def test_it_has_attributes
     offset = Offset.new
-    expected = Time.now.strftime("%m%d%y").to_i
-    assert_equal expected, offset.date_num
+    expected = Time.now.strftime("%m%d%y")
+    assert_equal expected, offset.date
   end
 
   def test_last_four
