@@ -16,5 +16,6 @@ class EnigmaTest < Minitest::Test
     assert_instance_of Array, enigma.key
     assert_equal 5, enigma.key.count
     assert_instance_of String, enigma.message
+    assert_equal "message", enigma.message
   end
 end
