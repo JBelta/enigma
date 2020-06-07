@@ -6,7 +6,7 @@ class Shift
 
   def initialize
     @keys = Key.new.first_five
-    @offsets = Offset.new.last_four
+    @offsets = Offset.new
   end
 
   def key_pairs
@@ -18,7 +18,7 @@ class Shift
   end
 
   def sum_keys_and_offsets
-   sum = [self.key_pairs, @offsets].transpose.map do |string|
+   sum = [self.key_pairs, @offsets.last_four].transpose.map do |string|
      string[0].to_i + string[1].to_i
    end
    sum
