@@ -14,4 +14,11 @@ class KeyTest < Minitest::Test
   key = Key.new
   assert_equal String, key.numbers.class
   end
+
+  def test_first_five
+    key = Key.new
+    keys = key.first_five
+    assert_equal Array, keys.class
+    assert_equal 5, keys.count
+  end
 end
