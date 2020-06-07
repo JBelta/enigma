@@ -15,4 +15,10 @@ class OffsetTest < Minitest::Test
     expected = Time.now.strftime("%m%d%y").to_i
     assert_equal expected, offset.date_num
   end
+
+  def test_last_four
+  offset = Offset.new
+  assert_equal Array, offset.last_four.class
+  assert_equal 4, offset.last_four.count
+  end
 end
