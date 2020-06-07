@@ -5,17 +5,17 @@ require 'pry'
 
 class EnigmaTest < Minitest::Test
   def test_it_exists
-    enigma = Enigma.new("message", Shift.new.keys, Shift.new.offsets)
+    enigma = Enigma.new
     assert_instance_of Enigma, enigma
   end
 
   def test_it_has_attributes
-    enigma = Enigma.new("message", Shift.new.keys, Shift.new.offsets)
-    assert_instance_of Array, enigma.date
-    assert_equal 4, enigma.date.count
-    assert_instance_of Array, enigma.key
-    assert_equal 5, enigma.key.count
+    enigma = Enigma.new
+    #binding.pry
+    assert_instance_of String, enigma.date
+    assert_instance_of String, enigma.key
     assert_instance_of String, enigma.message
-    assert_equal "message", enigma.message
+    assert_equal "", enigma.message
   end
+
 end
