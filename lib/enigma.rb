@@ -22,9 +22,4 @@ class Enigma < Shift
     end
     hash = {encryption: encrypted.join, key: key, date: date}
   end
-
-
-  def encrypt(message = @message, key = @key, date = @date)
-    if message == @message && key == @key && date = @date
-  end
 end

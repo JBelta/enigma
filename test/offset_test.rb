@@ -2,6 +2,7 @@ require './lib/offset'
 require 'minitest/autorun'
 require 'minitest/pride'
 require 'date'
+require 'pry'
 
 class OffsetTest < Minitest::Test
 
@@ -19,6 +20,7 @@ class OffsetTest < Minitest::Test
   def test_last_four
   offset = Offset.new
   assert_equal Array, offset.last_four.class
+  binding.pry
   assert_equal 4, offset.last_four.count
   end
 end
