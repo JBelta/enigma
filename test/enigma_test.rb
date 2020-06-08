@@ -14,7 +14,24 @@ class EnigmaTest < Minitest::Test
     assert_instance_of String, enigma.date
     assert_instance_of String, enigma.key
     assert_instance_of String, enigma.message
-  assert_instance_of Array, enigma.alphabet
+    assert_instance_of Array, enigma.alphabet
+    assert_instance_of Array, enigma.shift
     assert_equal "Hello World", enigma.message
+  end
+
+  def test_encrypt_given_key_and_date
+    skip
+    enigma = Enigma.new
+    expected = enigma.args_are_instance_variables
+    assert_instance_of Hash, expected
+    assert_instance_of String, expected[:encryption]
+    require "pry"; binding.pry
+    assert_equal expected[:encryption].length, enigma.message.length
+  end
+
+  def test_encrypt
+    enigma = Enigma.new
+    require "pry"; binding.pry
+    assert_instance_of Enigma, enigma
   end
 end
