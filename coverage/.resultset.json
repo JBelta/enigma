@@ -1,0 +1,194 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/Users/jamesbelta/turing/1module_repeat/projects/enigma/lib/enigma.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          4,
+          4,
+          4,
+          4,
+          null,
+          null,
+          1,
+          4,
+          4,
+          4,
+          30,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          26,
+          null,
+          4,
+          null,
+          null,
+          1,
+          4,
+          4,
+          4,
+          39,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          35,
+          null,
+          4,
+          null,
+          null
+        ]
+      },
+      "/Users/jamesbelta/turing/1module_repeat/projects/enigma/lib/shiftable.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          10,
+          10,
+          32,
+          null,
+          8,
+          null,
+          null,
+          1,
+          9,
+          null,
+          null,
+          1,
+          8,
+          32,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jamesbelta/turing/1module_repeat/projects/enigma/lib/key.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          6,
+          null,
+          null
+        ]
+      },
+      "/Users/jamesbelta/turing/1module_repeat/projects/enigma/lib/offset.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          6,
+          6,
+          null,
+          null
+        ]
+      },
+      "/Users/jamesbelta/turing/1module_repeat/projects/enigma/test/key_test.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/jamesbelta/turing/1module_repeat/projects/enigma/test/test_helper.rb": {
+        "lines": [
+          1,
+          1
+        ]
+      },
+      "/Users/jamesbelta/turing/1module_repeat/projects/enigma/test/offset_test.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/jamesbelta/turing/1module_repeat/projects/enigma/test/shiftable_test.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1591691425
+  }
+}
