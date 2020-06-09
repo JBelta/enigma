@@ -1,47 +1,32 @@
-require "./lib/shift"
 require "./lib/shiftable"
+require "./lib/key"
+require "./lib/offset"
 
-class Enigma < Shift
+class Enigma
   include Shiftable
 
-  attr_reader :message, :key, :date, :alphabet, :shift
+  attr_reader :message, :random, :date, :alphabet, :shift
 
   def initialize
     @alphabet = ("a".."z").to_a << " "
     @message = "Hello World"
-    @key = Key.new.first_five.sum("")
+    @random = Key.new.numbers.join
     @date = Offset.new.date
-    @shift = Shift.new.sum_keys_and_offsets
   end
 
-  def args_are_instance_variables
+  def encrypt(message, key = @random, date = @date)
     encrypted = []
+    key_array = key.split("")
     input = message.downcase.split("")
     index = input.map{|letter| @alphabet.index(letter)}
-    cycle_limit = (index.count % @shift.count) + 1
-    index_shifts = index.zip(@shift.cycle(cycle_limit))
+    keys = key_pairs(key_array)
+    offsets = offset_array(date)
+    shift = sum_keys_and_offsets(keys, offsets)
+    cycle_limit = (index.count / shift.count) + 1
+    index_shifts = index.zip(shift.cycle(cycle_limit))
     index_shifts.each do |pair|
-    encrypted << @alphabet.rotate(pair[1])[pair[0]]
+      encrypted << @alphabet.rotate(pair[1])[pair[0]]
     end
     hash = {encryption: encrypted.join, key: key, date: date}
   end
-
-  def args_one_instance_variable
-    keys = key_pairs(key)
-    encrypted = []
-    input = message.downcase.split("")
-    index = input.map{|letter| @alphabet.index(letter)}
-    cycle_limit = (index.count % @shift.count) + 1
-    index_shifts = index.zip(@shift.cycle(cycle_limit))
-    index_shifts.each do |pair|
-    encrypted << @alphabet.rotate(pair[1])[pair[0]]
-    end
-    hash = {encryption: encrypted.join, key: key, date: date}
-  end
-
-  def encrypt(message = @message, key = @key, offset = @offset)
-    if offset != @offset && key != key
-
-  end
-
 end
