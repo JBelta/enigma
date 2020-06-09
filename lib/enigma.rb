@@ -27,7 +27,7 @@ class Enigma
     index_shifts.each do |pair|
       encrypted << @alphabet.rotate(pair[1])[pair[0]]
     end
-    hash = {encryption: encrypted.join, key: key, date: date}
+    {encryption: encrypted.join, key: key, date: date}
   end
 
   def decrypt(message, key = @random, date = @date)
@@ -43,6 +43,6 @@ class Enigma
     index_shifts.each do |pair|
       decrypted << @alphabet.rotate(-pair[1])[pair[0]]
     end
-    hash = {decryption: decrypted.join, key: key, date: date}
+    {decryption: decrypted.join, key: key, date: date}
   end
 end
