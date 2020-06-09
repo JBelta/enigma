@@ -33,7 +33,7 @@ class Enigma
   def decrypt(message, key = @random, date = @date)
     decrypted = []
     key_array = key.split("")
-    input = message.downcase.split("")
+    input = message.split("")
     index = input.map{|letter| @alphabet.index(letter)}
     keys = key_pairs(key_array)
     offsets = offset_array(date)
