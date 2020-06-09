@@ -25,11 +25,10 @@ class EnigmaTest < Minitest::Test
     expected = enigma.args_are_instance_variables
     assert_instance_of Hash, expected
     assert_instance_of String, expected[:encryption]
-    require "pry"; binding.pry
     assert_equal expected[:encryption].length, enigma.message.length
   end
 
-  def test_encrypt
+  def test_
     enigma = Enigma.new
     require "pry"; binding.pry
     assert_instance_of Enigma, enigma
