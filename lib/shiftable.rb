@@ -2,8 +2,7 @@ module Shiftable
 
   def key_pairs(key)
     key_collection = []
-    array = key.split("")
-    array.each_cons(2) do |string_1, string_2|
+    key.each_cons(2) do |string_1, string_2|
       key_collection << (string_1+string_2)
     end
     key_collection
