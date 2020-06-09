@@ -31,7 +31,7 @@ class Enigma
   end
 
   def decrypt(message, key = @random, date = @date)
-    encrypted = []
+    decrypted = []
     key_array = key.split("")
     input = message.downcase.split("")
     index = input.map{|letter| @alphabet.index(letter)}
@@ -41,8 +41,8 @@ class Enigma
     cycle_limit = (index.count / shift.count) + 1
     index_shifts = index.zip(shift.cycle(cycle_limit))
     index_shifts.each do |pair|
-      encrypted << @alphabet.rotate(-pair[1])[pair[0]]
+      decrypted << @alphabet.rotate(-pair[1])[pair[0]]
     end
-    hash = {decryption: encrypted.join, key: key, date: date}
+    hash = {decryption: decrypted.join, key: key, date: date}
   end
 end
