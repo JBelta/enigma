@@ -1,3 +1,4 @@
+require_relative 'test_helper'
 require "./lib/shiftable"
 require "./lib/enigma"
 require "minitest/autorun"
