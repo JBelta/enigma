@@ -9,13 +9,13 @@ module Shiftable
     key_collection
   end
 
-  def sum_keys_and_offsets(keys, offsets)
-    integer = offsets.to_i ** 2
-    offset_last_four = integer.to_s.split("").last(4)
-    sum = [keys, offset_last_four].transpose.map do |string|
-     string[0].to_i + string[1].to_i
-   end
-   sum
+  def offset_array(date)
+    (date.to_i ** 2).to_s.split("").last(4)
   end
 
+  def sum_keys_and_offsets(keys, offsets)
+    [keys, offsets].transpose.map do |string|
+     string[0].to_i + string[1].to_i
+   end
+  end
 end
