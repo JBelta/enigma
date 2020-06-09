@@ -2,7 +2,6 @@ require "./lib/enigma"
 
 enigma = Enigma.new
 
-#require 'pry'; binding.pry
 message = File.open(ARGV[0], "r")
 input = message.read.chomp
 encrypted = enigma.encrypt(input, "02715", "040895")
