@@ -20,8 +20,12 @@ class EnigmaTest < Minitest::Test
 
   def test_encrypt
     enigma = Enigma.new
+    expected = enigma.encrypt("Hello World", "02715", "040895")
     assert_instance_of String, enigma.encrypt("Hello")[:encryption]
     assert_instance_of String, enigma.encrypt("Hello")[:key]
     assert_instance_of String, enigma.encrypt("Hello")[:date]
+    assert_equal "keder ohulw", expected[:encryption]
+    assert_equal "02715", expected[:key]
+    assert_equal "040895", expected[:date]
   end
 end
