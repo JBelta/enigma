@@ -28,4 +28,15 @@ class EnigmaTest < Minitest::Test
     assert_equal "02715", expected[:key]
     assert_equal "040895", expected[:date]
   end
+
+  def test_decrypt
+    enigma = Enigma.new
+    expected = enigma.decrypt("keder ohulw", "02715", "040895")
+    assert_instance_of String, enigma.decrypt("anything")[:decryption]
+    assert_instance_of String, enigma.decrypt("anything")[:key]
+    assert_instance_of String, enigma.decrypt("anything")[:date]
+    assert_equal "hello world", expected[:decryption]
+    assert_equal "02715", expected[:key]
+    assert_equal "040895", expected[:date]
+  end
 end
